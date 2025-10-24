@@ -15,8 +15,8 @@ public class FilterEvens  {
         FilterEvens ArrayOps = null;
         int[] numbers = generateRandomNumbers(n);
 
-        int evenCount = countEvens(numbers);          // 1-й проход: считаем
-        int[] evens   = filterEvens(numbers, evenCount); // 2-й проход: копируем
+        int evenCount = countEvens(numbers);
+        int[] evens   = filterEvens(numbers, evenCount);
 
         System.out.println("Исходный: " + Arrays.toString(numbers));
         System.out.println("Чётные:   " + Arrays.toString(evens));
