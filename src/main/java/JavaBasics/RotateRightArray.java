@@ -10,23 +10,20 @@ rotateRight(int[] a, int k) — циклический сдвиг вправо �
  */
 public class RotateRightArray {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        System.out.println("Массив до сдвига: " + Arrays.toString(numbers));
-        System.out.println("Введите шаг сдвига: ");
-        int k = sc.nextInt();
-        sc.close();
-        numbers = rotateRight(numbers, k);
+        int[] arr = {1,2,3,4,5,6,7};
+        int step = 3;
+        int[] newArr = new int[step];
 
-        System.out.println("Массив после сдвига: " + Arrays.toString(numbers));
-    }
-    public static int[] rotateRight(int[] a, int k){
-        int temporary = a[a.length-1];
-        int step = 1;
-        for(int i = 1; i < a.length - 1 ; i++){
-            a[a.length - i] = a[step++];
+        System.arraycopy(arr, arr.length - step, newArr, 0, newArr.length);
+
+        for (int i = 0; i < arr.length - step; i++) {
+            arr[arr.length - (1 + i)] = arr[arr.length - 1 - (step + i)];
         }
-        a[0] = temporary;
-        return a;
+
+        System.arraycopy(newArr, 0, arr, 0, newArr.length);
+
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(newArr));
+
     }
 }
