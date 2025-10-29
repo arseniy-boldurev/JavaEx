@@ -1,9 +1,19 @@
 package JavaBasics;
+/*
+Факториал (итеративно)
+long fact(int n) — n>=0, для больших n объясни переполнение.
+Проверь: 0! = 1, 1!, 10!.
 
-import java.util.Arrays;
-
+ */
 public class Test {
-/*   public static void main(String[] args) {
+    public static void main(String[] args) {
+
+    }
+}
+
+
+    /*  Rotate array
+        public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7};
         int step = 3;
         int[] newArr = new int[step];
@@ -20,4 +30,3 @@ public class Test {
         System.out.println(Arrays.toString(newArr));
 
     } */
-}
